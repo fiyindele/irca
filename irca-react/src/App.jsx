@@ -1,26 +1,15 @@
-import { useState } from "react";
 import "./App.css";
+import Heading from "./Heading.jsx";
+import List from "./List.jsx";
+import CountButton from "./CountButton.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div></div>
-      <h1>Take your pick 👀</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <br />
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <br />
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
+      <Heading />
+      <CountButton />
+      <List />
     </>
   );
 }
