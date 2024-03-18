@@ -6,7 +6,7 @@ const Activity = () => {
   const [count, setCount] = useState(0);
   const [data, setData] = useState(null);
 
-  const url = "https://bored-api.appbrewery.com/random";
+  const url = "http://www.boredapi.com/api/activity/";
 
   // fetch(url)
   //   .then((response) => response.json())
@@ -23,8 +23,12 @@ const Activity = () => {
   };
 
   const handleButtonClick = () => {
-    setCount((prevCount) => prevCount + 1);
-    fetchData();
+    // setCount((prevCount) => prevCount + 1);
+    // fetchData();
+    // if (data) {
+    //   const dataContext = document.getElementsByClassName(".dataContext");
+    //   dataContext.textContent = `Activity: ${data.activity} /n Type: ${data.type}`;
+    // }
   };
 
   // useEffect(() => {
@@ -47,12 +51,13 @@ const Activity = () => {
   return (
     <div className="card">
       <button onClick={handleButtonClick()}>count is {count}</button>
-      {data && (
+      <div className="dataContext"></div>
+      {/* {data && (
         <div>
           <h2>Activity: {data.activity}</h2>
           <h3>Type: {data.type}</h3>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
